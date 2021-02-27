@@ -1,99 +1,211 @@
-body
-{
-    overflow-x: hidden;
-    padding: 0;
-    margin: 0;
-}
 
-nav
-{
-    display: flex;
-    background-color: steelblue;
-    justify-content: space-around;
-    padding: 10px;
-}
 
-nav .logo h4
-{
-    margin: 0;
-    color: white;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-nav ul
-{
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-    width: 40%;
-    margin: 0;
-}
+        a 
+        {
+            color: rgb(70, 68, 68);
+            display: inline-block;
+            text-decoration: none;
+        }
+        /* *
+        {
+            border: 1px solid black;
+        } */
+        body 
+        {
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: ghostwhite;
+            overflow: hidden;
+        }
+        nav 
+        {
+            position: fixed;
+            border-right: 1px solid gainsboro;
+            box-shadow: 1px 1px 1px 1px rgba(106, 106, 106, 0.138);
+            background-color: white;
+            margin: 0;
+            padding: 15px 20px;
+            width: 240px;
+            height: 100vh;
+            z-index: 10;
+            /* display: none; */
+            transition: 1.2s;
+        }
+        .__nav-target-show {
+            transform: translateX(0);
+            background-color: white;
+        }
+        /* nav header */
+        nav .nav_header span 
+        {
+            display: inline-block;
+            font-size: 13px;
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+        }
+        /* nav menu */
+        nav .nav_menu
+        {
+            margin: 20px 0;
+        }
+        nav .nav_menu h4
+        {
+             text-transform: uppercase;
+             font-weight: lighter;
+             color: rgb(141, 138, 138);
+             font-size: 13px;
+             letter-spacing: 1px;
+             margin: 14px 0;
+        }
+        nav .nav_menu a 
+        {
+             display: block;
+             padding: 6px 0;
+             position: relative;
+        }
+        nav .nav_menu a:hover 
+        {
+            color: rgb(42, 241, 108);
+        }
+        nav .nav_menu a ._choose
+        {
+            display: inline-block;
+            color: rgb(15, 61, 33);
+            font-size: 11px;
+            position: absolute;
+            right: 0;
+        }
+        /* dropdown */
+        nav .nav_menu ._dropdown 
+        {
+            background-color: whitesmoke;
+            border-left: 2px solid black;
+            border-radius: 4px;
+            /* min-height: 100px; */
+            margin: 0;
+            padding: 10px;
+            font-size: 12px;
+            display: none;
+            transition: 2.1s;
+            opacity: 0;
+        }
+        ._show-dropdown
+        {
+            display: block !important;
+            opacity: 1 !important;
+            transition: 2.1s !important;
+        }
+        nav .nav_menu ._dropdown a
+        {
+            margin: 0;
+            padding: 4px;
+            text-transform: capitalize;
+        }
+         nav .nav_menu ._dropdown a:hover
+        {
+            background-color: rgb(30, 233, 91);
+            color: white;
+        }
+        /*  */
+        nav .nav_menu span
+        {
+            display: inline-block;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+        } 
+        
+        /* header */
+        header .header
+        {
+            /* min-height: 50px; */
+            background-color: white;
+            border-bottom: 1px solid gainsboro;
+            box-shadow: 1px 1px 1px 1px whitesmoke;
+            display: flex;
+            padding: 10px 35px;
+        }
+        header .header .search
+        {
+            flex: 2;
+            text-align: end;
+        }
+        header .header .search ._form-group
+        {
+            width: 290px;
+            height: 35px;
+            display: inline-block;
+            /* border: 1px solid gainsboro; */
+            position: relative;
+            background-color: ghostwhite;
+            border-radius: 4px;
+            color: gray;
+            padding: 4px 10px;
+        }
+        header .header .search ._form-group input
+        {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            box-sizing: border-box;
+            color: gray;
+            font-weight: lighter;
+            font-size: small;
+        }
+        header .header .search ._form-group button
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 40px;
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid black; */
+            color: gray;
+            /* background-color: gainsboro; */
+        }
+         header .header .btn_show
+         {
+             flex: 1;
+             text-align: end;
+             padding-top: 2px;
+         }
+         header .header .btn_show #btn-target 
+         {
+            cursor: pointer;
+            transition: 1.3s;
+            display: none;
+         }
+         header .header .btn_show #btn-target:hover
+         {
+            color: rgb(47, 255, 109);
+         }
 
-nav ul li
-{
-    margin: 0 10px;
-}
 
-nav ul li a
-{
-    text-decoration: none;
-    color: white;
-}
+@media screen and (max-width: 676px) {
 
-nav .data-target
-{
-    display: none;
-}
-
-/* mobile */
-@media screen and (max-width: 576px)
-{
-    nav
-    {
-        position: relative;
-    }
-
-    nav ul 
-    {
-        /* display: unset; */
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        background-color: steelblue;
-        height: 500px;
-        width: 100%;
-        justify-content: space-evenly;
-        right: 0;
-        z-index: -1;
-        /* transform: translateX(100%); */
-        transition: 0.9s;
-        opacity: 1;
+    nav {
+        transform: translateX(-98%);
+        background-color: rgba(95, 94, 94, 0.494);
         width: 50%;
-        text-align: center;
     }
 
-    .slide
-    {
-        opacity: 1;
-        transform: translateX(0);
-        background-color: rgb(43, 145, 228);
-        width: 80%;
-    }
-
-    nav .data-target
-    {
+    header .header .btn_show #btn-target {
         display: unset;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid whitesmoke;
-        padding: 2px;
-        cursor: pointer;
     }
-
-    nav .data-target span 
-    {
-        background-color: white;
-        margin: 2px;
-        padding: 1px;
-        width: 30px;
-    }
+     header .header .btn_show #icon {
+         display: none;
+     }
 }
