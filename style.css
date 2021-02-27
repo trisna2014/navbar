@@ -1,0 +1,99 @@
+body
+{
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+nav
+{
+    display: flex;
+    background-color: steelblue;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav .logo h4
+{
+    margin: 0;
+    color: white;
+}
+
+nav ul
+{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    width: 40%;
+    margin: 0;
+}
+
+nav ul li
+{
+    margin: 0 10px;
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: white;
+}
+
+nav .data-target
+{
+    display: none;
+}
+
+/* mobile */
+@media screen and (max-width: 576px)
+{
+    nav
+    {
+        position: relative;
+    }
+
+    nav ul 
+    {
+        /* display: unset; */
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: steelblue;
+        height: 500px;
+        width: 100%;
+        justify-content: space-evenly;
+        right: 0;
+        z-index: -1;
+        /* transform: translateX(100%); */
+        transition: 0.9s;
+        opacity: 1;
+        width: 50%;
+        text-align: center;
+    }
+
+    .slide
+    {
+        opacity: 1;
+        transform: translateX(0);
+        background-color: rgb(43, 145, 228);
+        width: 80%;
+    }
+
+    nav .data-target
+    {
+        display: unset;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid whitesmoke;
+        padding: 2px;
+        cursor: pointer;
+    }
+
+    nav .data-target span 
+    {
+        background-color: white;
+        margin: 2px;
+        padding: 1px;
+        width: 30px;
+    }
+}
