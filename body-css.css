@@ -1,0 +1,36 @@
+.home-page .__home-page {
+    background-color: rgb(39, 223, 131);
+    padding: 12px;
+    border-radius: 4px;
+    color: white;
+    position: relative;
+    border-left: 3px solid teal;
+}
+.home-page .__home-page a {
+    padding: 2px;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+}
+.home-page .__home-page a:hover {
+    color: teal;
+}
+.home-page .__home-page span._icon {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+}
+
+
+@media screen and (max-width: 676px) {
+    .col-md-5 {
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 1276px) {
+     .col-md-5 {
+        margin-bottom: 8px;
+    }
+}
