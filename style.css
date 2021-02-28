@@ -176,11 +176,21 @@
             color: gray;
             /* background-color: gainsboro; */
         }
+         header .header .user
+         {
+             flex: 1;
+             text-align: end;
+             padding-top: 2px;
+         }
+         header .header .user span {
+             cursor: pointer;
+         }
          header .header .btn_show
          {
              flex: 1;
              text-align: end;
              padding-top: 2px;
+             display: none;
          }
          header .header .btn_show #btn-target 
          {
@@ -192,20 +202,84 @@
          {
             color: rgb(47, 255, 109);
          }
+         header .header .user ._name {
+             font-size: 12px;
+             font-style: italic;
+         }
+
+
+/* body */
+.body {
+   display: flex;
+   position: relative;
+}
+.body .container-body {
+    width: 81vw;
+    /* border: 1px solid red; */
+    padding: 20px 10px;
+    position: absolute;
+    top: 16px;
+    right: 0;
+    font-size: 14px;
+    background-color: white;
+    border-top: 2px solid rgba(128, 128, 128, 0.268);
+}
 
 
 @media screen and (max-width: 676px) {
 
     nav {
-        transform: translateX(-98%);
-        background-color: rgba(95, 94, 94, 0.494);
+        transform: translateX(-97%);
+        background-color: rgb(73, 72, 72);
         width: 50%;
     }
-
+     header .header {
+         flex-direction: row;
+     }
+    header .header .search {
+        flex: 1;
+        margin-right: 20px;
+        order: 2;
+    }
+    header .header .search ._form-group {
+        width: 100%;
+    }
+    header .header .user {
+        order: 1;
+        flex: 0;
+        margin: 0;
+        margin-right: 12px;
+    }
+    header .header .user ._name{
+        display: none;
+    }
+     header .header .btn_show {
+         flex: 0;
+         display: unset;
+         order: 3;
+     }
     header .header .btn_show #btn-target {
         display: unset;
     }
      header .header .btn_show #icon {
          display: none;
      }
+
+      .body .container-body {
+        width: 100%;
+        padding: 14px;
+        font-size: 12px;
+        background-color: rgba(127, 155, 155, 0.042);
+         min-height: 100vh;
+         border: none;
+         top: 0;
+    }
+}
+
+@media screen and (max-width: 1276px) {
+    nav {
+        width: auto;
+    }
+
+   
 }
